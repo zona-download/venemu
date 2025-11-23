@@ -1,1 +1,151 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>X8 Sandbox – Zona Download</title>
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="X8 Sandbox APK" />
+  <meta property="og:description" content="Download X8 Sandbox versi terbaru – 100% aman, cepat, dan tanpa iklan." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#f5f7fa;
+      --card:#fff;
+      --text:#0f172a;
+      --muted:#545f75;
+      --accent:#2563eb;
+      --accent-hover:#1d4ed8;
+      --radius:16px;
+    }
+    [data-theme="dark"]{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --text:#e6eef8;
+      --muted:#9fb0cf;
+      --accent:#3b82f6;
+      --accent-hover:#60a5fa;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;}
+    body{background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;}
+
+    .container{max-width:860px;margin:0 auto;padding:22px 16px;}
+
+    /* HEADER */
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
+    .brand{font-size:1.35rem;font-weight:700;letter-spacing:-0.3px;}
+    .theme-btn{
+      cursor:pointer;border:0;background:var(--card);padding:8px 12px;border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);font-size:0.85rem;color:var(--muted);
+    }
+
+    /* CARD */
+    .card{
+      background:var(--card);
+      padding:22px;
+      border-radius:var(--radius);
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+      margin-top:22px;
+    }
+
+    h2{font-size:1.2rem;margin-bottom:6px;}
+    p.info{color:var(--muted);font-size:0.93rem;margin-bottom:12px;}
+
+    .btn{
+      display:inline-block;
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:600;
+      text-decoration:none;
+      transition:0.2s;
+      text-align:center;
+    }
+    .btn-primary{
+      background:var(--accent);
+      color:#fff;
+    }
+    .btn-primary:hover{
+      background:var(--accent-hover);
+    }
+
+    /* SECTIONS */
+    .section-title{
+      font-weight:700;
+      margin-top:20px;
+      margin-bottom:8px;
+      font-size:1.05rem;
+    }
+    ol li{margin-bottom:8px;color:var(--muted);}
+
+    footer{text-align:center;margin-top:28px;color:var(--muted);font-size:0.92rem;}
+
+    /* Responsive */
+    @media(max-width:640px){
+      .card{padding:18px}
+      h2{font-size:1.08rem}
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <header>
+    <div class="brand">Zona Download</div>
+    <button id="toggleTheme" class="theme-btn">🌙 / ☀️</button>
+  </header>
+
+  <!-- MAIN DOWNLOAD CARD -->
+  <section class="card">
+    <h2>📥 X8 Sandbox (Versi Terbaru)</h2>
+    <p class="info">X8 Sandbox versi terbaru dengan performa lebih cepat, UI lebih stabil, dan peningkatan kompatibilitas Android 12 – 14.</p>
+
+    <a class="btn btn-primary" href="https://link-download-anda" download>Download X8 Sandbox</a>
+
+    <!-- GUIDE -->
+    <div class="section-title">📌 Cara Download</div>
+    <ol>
+      <li>Tekan tombol “Download”.</li>
+      <li>Pilih “Open” atau “Lanjutkan”.</li>
+      <li>Tunggu proses verifikasi link.</li>
+      <li>Klik “Go to Link”.</li>
+      <li>Pilih “Download File”.</li>
+    </ol>
+
+    <div class="section-title">📝 Catatan</div>
+    <p class="info">Gunakan browser Brave atau Firefox untuk proses download lebih lancar dan tanpa gangguan.</p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Zona Download
+  </footer>
+
+</div>
+
+<script>
+  // Theme toggle
+  const root = document.documentElement;
+  const savedTheme = localStorage.getItem('theme');
+  if(savedTheme === 'dark'){
+    root.setAttribute('data-theme','dark');
+  }
+
+  document.getElementById('toggleTheme').addEventListener('click',()=>{
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    if(isDark){
+      root.setAttribute('data-theme','light');
+      localStorage.setItem('theme','light');
+    } else {
+      root.setAttribute('data-theme','dark');
+      localStorage.setItem('theme','dark');
+    }
+  });
+
+  // Update year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
