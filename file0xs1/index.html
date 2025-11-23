@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Game Guardian - Zona Download</title>
+  <title>X8 Sandbox & Game Guardian - VeNemu</title>
 
-  <!-- Meta OG -->
-  <meta property="og:title" content="Game Guardian APK" />
-  <meta property="og:description" content="Download game guardian terbaru apk" />
+  <meta property="og:title" content="X8 Sandbox & Game Guardian APK" />
+  <meta property="og:description" content="Download X8 Sandbox dan Game Guardian terbaru" />
   <meta property="og:type" content="website" />
 
   <style>
@@ -31,52 +30,44 @@
     }
 
     * { box-sizing:border-box; font-family:"Inter",system-ui,Roboto,Arial; }
-    body {
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing: antialiased;
-    }
+    body { margin:0; background:var(--bg); color:var(--text); }
+
     .container {
       max-width:900px;
       margin:0 auto;
       padding:22px 14px 40px;
     }
 
-    /* Title */
-    h1,h2,h3 { margin:0; }
-
-    /* Card Premium */
+    /* Card */
     .card {
       background:var(--card);
       backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
       border-radius:18px;
       padding:26px;
       box-shadow:var(--shadow);
       margin-top:24px;
-      transition:0.2s ease;
-    }
-
-    /* Download grid */
-    .download-grid {
-      display:grid;
-      grid-template-columns:1fr;
-      gap:18px;
-      margin-top:22px;
-      padding-bottom:14px;
-      border-bottom:1px solid rgba(0,0,0,0.06);
-    }
-
-    .download-grid:last-of-type {
-      border:none;
-      padding-bottom:0;
     }
 
     h2 {
       font-size:1.15rem;
-      font-weight:700;
-      margin-bottom:6px;
+      margin:0 0 6px 0;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    h1 {
+      font-size:1.5rem;
+      font-weight:800;
+      text-align:center;
+      margin-bottom:12px;
+    }
+
+    .category-title {
+      font-size:1.25rem;
+      margin-top:26px;
+      margin-bottom:14px;
+      font-weight:800;
       background:linear-gradient(90deg,var(--accent),var(--accent2));
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
@@ -84,29 +75,30 @@
 
     .info { color:var(--muted); line-height:1.55; }
 
-    /* Buttons */
     .buttons { margin-top:14px; }
     .btn {
-      display:inline-block;
       padding:11px 18px;
       border-radius:10px;
       font-weight:600;
-      font-size:0.95rem;
       text-decoration:none;
-      transition:0.2s;
-      cursor:pointer;
-    }
-    .btn-primary {
+      display:inline-block;
+      color:white;
       background:linear-gradient(135deg,var(--accent),var(--accent2));
-      color:#fff;
       box-shadow:0 4px 14px rgba(37,99,235,0.3);
+      transition:0.2s;
     }
-    .btn-primary:hover {
+    .btn:hover {
       opacity:0.92;
       transform:translateY(-1px);
     }
 
-    /* Sections */
+    .download-item {
+      margin-top:24px;
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+    .download-item:last-child { border:none; }
+
     .section-title {
       font-weight:700;
       margin-top:28px;
@@ -120,22 +112,16 @@
     ol {
       padding-left:18px;
       line-height:1.55;
-      font-size:0.97rem;
     }
 
     footer {
-      margin-top:38px;
       text-align:center;
+      margin-top:38px;
       font-size:0.9rem;
       color:var(--muted);
     }
 
-    /* Responsive */
-    @media (min-width:640px) {
-      .download-grid { grid-template-columns:1fr 220px; align-items:center; }
-    }
-
-    /* Theme Toggle Button */
+    /* Theme toggle */
     #toggleTheme {
       position:fixed;
       bottom:20px;
@@ -144,9 +130,7 @@
       padding:10px 12px;
       border-radius:10px;
       backdrop-filter:blur(10px);
-      border:1px solid rgba(255,255,255,0.2);
       cursor:pointer;
-      font-size:0.9rem;
       box-shadow:var(--shadow);
     }
   </style>
@@ -155,76 +139,88 @@
 <body>
   <div class="container">
 
-    <section class="card" id="download-card">
+    <h1>Download X8 Sandbox & Game Guardian</h1>
 
-      <!-- 1 — Game Guardian Original -->
-      <div class="download-grid">
-        <div>
-          <h2>📥 1. Game Guardian (Original)</h2>
-          <p class="info">Game Guardian dengan 3 mode (Default, 32-bit dan 64-bit). Beberapa perangkat Android 14 ke atas mungkin mengalami kendala kompatibilitas.</p>
+    <!-- CARD UTAMA -->
+    <section class="card">
 
-          <div class="buttons">
-            <a class="btn btn-primary" href="https://sfl.gl/tAYWbt">Download</a>
-          </div>
+      <!-- ========== KATEGORI 1 ========== -->
+      <div class="category-title">1. X8 Sandbox</div>
+
+      <!-- X8 Sandbox Item -->
+      <div class="download-item">
+        <h2>📥 X8 Sandbox (Latest Version)</h2>
+        <p class="info">X8 Sandbox terbaru cocok untuk menjalankan aplikasi dan game dengan lingkungan virtual, tanpa root.</p>
+
+        <div class="buttons">
+          <a class="btn" href="https://sfl.gl/tAYWbt">Download</a>
         </div>
       </div>
 
-      <!-- 2 — 32bit -->
-      <div class="download-grid">
-        <div>
-          <h2>📥 2. Game Guardian (32bit)</h2>
-          <p class="info">Game Guardian dengan mode 32-bit. Beberapa perangkat Android 14 ke atas mungkin mengalami kendala kompatibilitas.</p>
 
-          <div class="buttons">
-            <a class="btn btn-primary" href="https://sfl.gl/QwI1Pn">Download</a>
-          </div>
+      <!-- ========== KATEGORI 2 ========== -->
+      <div class="category-title">2. Game Guardian</div>
+
+      <!-- GG Original -->
+      <div class="download-item">
+        <h2>📥 Game Guardian (Original)</h2>
+        <p class="info">Versi original dengan 3 mode: Default, 32bit, dan 64bit.</p>
+
+        <div class="buttons">
+          <a class="btn" href="https://sfl.gl/tAYWbt">Download</a>
         </div>
       </div>
 
-      <!-- 3 — 64bit -->
-      <div class="download-grid">
-        <div>
-          <h2>📥 3. Game Guardian (64bit)</h2>
-          <p class="info">Game Guardian dengan mode 64-bit. Beberapa perangkat Android 14 ke atas mungkin mengalami kendala kompatibilitas.</p>
+      <!-- GG 32bit -->
+      <div class="download-item">
+        <h2>📥 Game Guardian (32-bit)</h2>
+        <p class="info">Versi 32-bit, cocok untuk aplikasi lama atau perangkat tertentu.</p>
 
-          <div class="buttons">
-            <a class="btn btn-primary" href="https://sfl.gl/ZSNA">Download</a>
-          </div>
+        <div class="buttons">
+          <a class="btn" href="https://sfl.gl/QwI1Pn">Download</a>
         </div>
       </div>
+
+      <!-- GG 64bit -->
+      <div class="download-item">
+        <h2>📥 Game Guardian (64-bit)</h2>
+        <p class="info">Versi 64-bit untuk perangkat modern.</p>
+
+        <div class="buttons">
+          <a class="btn" href="https://sfl.gl/ZSNA">Download</a>
+        </div>
+      </div>
+
 
       <!-- Cara Download -->
-      <div>
-        <div class="section-title">📌 Cara Download</div>
-        <ol>
-          <li>Download file dari tombol di atas.</li>
-          <li>Klik tombol "Open" (tekan kembali jika ke tampilan lain).</li>
-          <li>Klik tombol "Next".</li>
-          <li>Klik tombol "Open".</li>
-          <li>Klik tombol "Open".</li>
-          <li>Klik tombol "Go to Link".</li>
-          <li>Klik tombol "Open Link".</li>
-          <li>Klik tombol "I'm a Human".</li>
-          <li>Klik tombol "Download File".</li>
-        </ol>
+      <div class="section-title">📌 Cara Download</div>
+      <ol>
+        <li>Download file dari tombol di atas.</li>
+        <li>Klik tombol "Open".</li>
+        <li>Klik tombol "Next".</li>
+        <li>Klik tombol "Open".</li>
+        <li>Klik tombol "Open".</li>
+        <li>Klik "Go to Link".</li>
+        <li>Klik "Open Link".</li>
+        <li>Pilih "I'm a Human".</li>
+        <li>Klik "Download File".</li>
+      </ol>
 
-        <div class="section-title">📝 Catatan</div>
-        <p class="info">Gunakan browser Firefox atau Brave untuk pengalaman download terbaik.</p>
-      </div>
+      <!-- Catatan -->
+      <div class="section-title">📝 Catatan</div>
+      <p class="info">Gunakan browser Firefox atau Brave untuk pengalaman terbaik.</p>
 
     </section>
 
     <footer>
-      © <span id="year"></span> Droid Ciyus ❤️
+      © <span id="year"></span> VeNemu ❤️
     </footer>
 
   </div>
 
-  <!-- Theme Toggle -->
   <div id="toggleTheme">🌙 / ☀️</div>
 
   <script>
-    // theme toggle
     const toggle = document.getElementById('toggleTheme');
     const saved = localStorage.getItem('theme');
     if (saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
