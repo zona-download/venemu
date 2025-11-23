@@ -3,149 +3,240 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>X8 Sandbox – Zona Download</title>
+  <title>Game Guardian - Zona Download</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="X8 Sandbox APK" />
-  <meta property="og:description" content="Download X8 Sandbox versi terbaru – 100% aman, cepat, dan tanpa iklan." />
+  <!-- Meta OG -->
+  <meta property="og:title" content="Game Guardian APK" />
+  <meta property="og:description" content="Download game guardian terbaru apk" />
   <meta property="og:type" content="website" />
 
   <style>
-    :root{
-      --bg:#f5f7fa;
-      --card:#fff;
-      --text:#0f172a;
-      --muted:#545f75;
+    :root {
+      --bg:#f2f4f8;
+      --card:rgba(255,255,255,0.75);
+      --text:#0c1222;
+      --muted:#5f6c89;
       --accent:#2563eb;
-      --accent-hover:#1d4ed8;
-      --radius:16px;
+      --accent2:#4f8bff;
+      --shadow:0 8px 25px rgba(0,0,0,0.08);
     }
-    [data-theme="dark"]{
-      --bg:#0b1220;
-      --card:#111a2e;
-      --text:#e6eef8;
-      --muted:#9fb0cf;
-      --accent:#3b82f6;
-      --accent-hover:#60a5fa;
-    }
-    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;}
-    body{background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;}
-
-    .container{max-width:860px;margin:0 auto;padding:22px 16px;}
-
-    /* HEADER */
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
-    .brand{font-size:1.35rem;font-weight:700;letter-spacing:-0.3px;}
-    .theme-btn{
-      cursor:pointer;border:0;background:var(--card);padding:8px 12px;border-radius:10px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);font-size:0.85rem;color:var(--muted);
+    [data-theme="dark"] {
+      --bg:#050b17;
+      --card:rgba(16,24,42,0.55);
+      --text:#e8efff;
+      --muted:#9fb7dd;
+      --accent:#4f8bff;
+      --accent2:#82afff;
+      --shadow:0 8px 25px rgba(0,0,0,0.35);
     }
 
-    /* CARD */
-    .card{
+    * { box-sizing:border-box; font-family:"Inter",system-ui,Roboto,Arial; }
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width:900px;
+      margin:0 auto;
+      padding:22px 14px 40px;
+    }
+
+    /* Title */
+    h1,h2,h3 { margin:0; }
+
+    /* Card Premium */
+    .card {
       background:var(--card);
-      padding:22px;
-      border-radius:var(--radius);
-      box-shadow:0 8px 22px rgba(0,0,0,0.08);
-      margin-top:22px;
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-radius:18px;
+      padding:26px;
+      box-shadow:var(--shadow);
+      margin-top:24px;
+      transition:0.2s ease;
     }
 
-    h2{font-size:1.2rem;margin-bottom:6px;}
-    p.info{color:var(--muted);font-size:0.93rem;margin-bottom:12px;}
+    /* Download grid */
+    .download-grid {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      margin-top:22px;
+      padding-bottom:14px;
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
 
-    .btn{
+    .download-grid:last-of-type {
+      border:none;
+      padding-bottom:0;
+    }
+
+    h2 {
+      font-size:1.15rem;
+      font-weight:700;
+      margin-bottom:6px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .info { color:var(--muted); line-height:1.55; }
+
+    /* Buttons */
+    .buttons { margin-top:14px; }
+    .btn {
       display:inline-block;
-      padding:12px 18px;
-      border-radius:12px;
+      padding:11px 18px;
+      border-radius:10px;
       font-weight:600;
+      font-size:0.95rem;
       text-decoration:none;
       transition:0.2s;
-      text-align:center;
+      cursor:pointer;
     }
-    .btn-primary{
-      background:var(--accent);
+    .btn-primary {
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
       color:#fff;
+      box-shadow:0 4px 14px rgba(37,99,235,0.3);
     }
-    .btn-primary:hover{
-      background:var(--accent-hover);
+    .btn-primary:hover {
+      opacity:0.92;
+      transform:translateY(-1px);
     }
 
-    /* SECTIONS */
-    .section-title{
+    /* Sections */
+    .section-title {
       font-weight:700;
-      margin-top:20px;
+      margin-top:28px;
       margin-bottom:8px;
-      font-size:1.05rem;
+      font-size:1.1rem;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
-    ol li{margin-bottom:8px;color:var(--muted);}
 
-    footer{text-align:center;margin-top:28px;color:var(--muted);font-size:0.92rem;}
+    ol {
+      padding-left:18px;
+      line-height:1.55;
+      font-size:0.97rem;
+    }
+
+    footer {
+      margin-top:38px;
+      text-align:center;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
 
     /* Responsive */
-    @media(max-width:640px){
-      .card{padding:18px}
-      h2{font-size:1.08rem}
+    @media (min-width:640px) {
+      .download-grid { grid-template-columns:1fr 220px; align-items:center; }
+    }
+
+    /* Theme Toggle Button */
+    #toggleTheme {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:var(--card);
+      padding:10px 12px;
+      border-radius:10px;
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.2);
+      cursor:pointer;
+      font-size:0.9rem;
+      box-shadow:var(--shadow);
     }
   </style>
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
 
-  <header>
-    <div class="brand">Zona Download</div>
-    <button id="toggleTheme" class="theme-btn">🌙 / ☀️</button>
-  </header>
+    <section class="card" id="download-card">
 
-  <!-- MAIN DOWNLOAD CARD -->
-  <section class="card">
-    <h2>📥 X8 Sandbox (Versi Terbaru)</h2>
-    <p class="info">X8 Sandbox versi terbaru dengan performa lebih cepat, UI lebih stabil, dan peningkatan kompatibilitas Android 12 – 14.</p>
+      <!-- 1 — Game Guardian Original -->
+      <div class="download-grid">
+        <div>
+          <h2>📥 1. Game Guardian (Original)</h2>
+          <p class="info">Game Guardian dengan 3 mode (Default, 32-bit dan 64-bit). Beberapa perangkat Android 14 ke atas mungkin mengalami kendala kompatibilitas.</p>
 
-    <a class="btn btn-primary" href="https://link-download-anda" download>Download X8 Sandbox</a>
+          <div class="buttons">
+            <a class="btn btn-primary" href="https://sfl.gl/tAYWbt">Download</a>
+          </div>
+        </div>
+      </div>
 
-    <!-- GUIDE -->
-    <div class="section-title">📌 Cara Download</div>
-    <ol>
-      <li>Tekan tombol “Download”.</li>
-      <li>Pilih “Open” atau “Lanjutkan”.</li>
-      <li>Tunggu proses verifikasi link.</li>
-      <li>Klik “Go to Link”.</li>
-      <li>Pilih “Download File”.</li>
-    </ol>
+      <!-- 2 — 32bit -->
+      <div class="download-grid">
+        <div>
+          <h2>📥 2. Game Guardian (32bit)</h2>
+          <p class="info">Game Guardian dengan mode 32-bit. Beberapa perangkat Android 14 ke atas mungkin mengalami kendala kompatibilitas.</p>
 
-    <div class="section-title">📝 Catatan</div>
-    <p class="info">Gunakan browser Brave atau Firefox untuk proses download lebih lancar dan tanpa gangguan.</p>
-  </section>
+          <div class="buttons">
+            <a class="btn btn-primary" href="https://sfl.gl/QwI1Pn">Download</a>
+          </div>
+        </div>
+      </div>
 
-  <footer>
-    © <span id="year"></span> Zona Download
-  </footer>
+      <!-- 3 — 64bit -->
+      <div class="download-grid">
+        <div>
+          <h2>📥 3. Game Guardian (64bit)</h2>
+          <p class="info">Game Guardian dengan mode 64-bit. Beberapa perangkat Android 14 ke atas mungkin mengalami kendala kompatibilitas.</p>
 
-</div>
+          <div class="buttons">
+            <a class="btn btn-primary" href="https://sfl.gl/ZSNA">Download</a>
+          </div>
+        </div>
+      </div>
 
-<script>
-  // Theme toggle
-  const root = document.documentElement;
-  const savedTheme = localStorage.getItem('theme');
-  if(savedTheme === 'dark'){
-    root.setAttribute('data-theme','dark');
-  }
+      <!-- Cara Download -->
+      <div>
+        <div class="section-title">📌 Cara Download</div>
+        <ol>
+          <li>Download file dari tombol di atas.</li>
+          <li>Klik tombol "Open" (tekan kembali jika ke tampilan lain).</li>
+          <li>Klik tombol "Next".</li>
+          <li>Klik tombol "Open".</li>
+          <li>Klik tombol "Open".</li>
+          <li>Klik tombol "Go to Link".</li>
+          <li>Klik tombol "Open Link".</li>
+          <li>Klik tombol "I'm a Human".</li>
+          <li>Klik tombol "Download File".</li>
+        </ol>
 
-  document.getElementById('toggleTheme').addEventListener('click',()=>{
-    const isDark = root.getAttribute('data-theme') === 'dark';
-    if(isDark){
-      root.setAttribute('data-theme','light');
-      localStorage.setItem('theme','light');
-    } else {
-      root.setAttribute('data-theme','dark');
-      localStorage.setItem('theme','dark');
-    }
-  });
+        <div class="section-title">📝 Catatan</div>
+        <p class="info">Gunakan browser Firefox atau Brave untuk pengalaman download terbaik.</p>
+      </div>
 
-  // Update year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Droid Ciyus ❤️
+    </footer>
+
+  </div>
+
+  <!-- Theme Toggle -->
+  <div id="toggleTheme">🌙 / ☀️</div>
+
+  <script>
+    // theme toggle
+    const toggle = document.getElementById('toggleTheme');
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+
+    toggle.addEventListener('click', () => {
+      const now = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', now);
+      localStorage.setItem('theme', now);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
