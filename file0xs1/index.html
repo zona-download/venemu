@@ -32,9 +32,20 @@
     * { box-sizing:border-box; font-family:"Inter",system-ui,Roboto,Arial; }
     body { margin:0; background:var(--bg); color:var(--text); }
 
-    .container { max-width:900px; margin:0 auto; padding:22px 14px 40px; }
+    /* Proteksi copy-paste */
+    body {
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+    }
 
-    /* Card */
+    .container {
+      max-width:900px;
+      margin:0 auto;
+      padding:22px 14px 40px;
+    }
+
     .card {
       background:var(--card);
       backdrop-filter:blur(18px);
@@ -49,10 +60,14 @@
       margin:0 0 6px 0;
       background:linear-gradient(90deg,var(--accent),var(--accent2));
       -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
     }
 
-    h1 { font-size:1.5rem; font-weight:800; text-align:center; margin-bottom:12px; }
+    h1 {
+      font-size:1.5rem;
+      font-weight:800;
+      text-align:center;
+      margin-bottom:12px;
+    }
 
     .category-title {
       font-size:1.25rem;
@@ -61,7 +76,6 @@
       font-weight:800;
       background:linear-gradient(90deg,var(--accent),var(--accent2));
       -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
     }
 
     .info { color:var(--muted); line-height:1.55; }
@@ -96,14 +110,12 @@
       font-size:1.1rem;
       background:linear-gradient(90deg,var(--accent),var(--accent2));
       -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
     }
 
     ol { padding-left:18px; line-height:1.55; }
 
     footer { text-align:center; margin-top:38px; font-size:0.9rem; color:var(--muted); }
 
-    /* Theme toggle */
     #toggleTheme {
       position:fixed;
       bottom:20px;
@@ -123,12 +135,9 @@
 
     <h1>Download X8 Sandbox & Game Guardian</h1>
 
-    <!-- CARD UTAMA -->
     <section class="card">
 
-      <!-- ========== KATEGORI 1 ========== -->
       <div class="category-title">1. X8 Sandbox (Latest Version)</div>
-
       <div class="download-item">
         <h2>📥 X8 Sandbox</h2>
         <p class="info">X8 Sandbox terbaru cocok untuk menjalankan aplikasi dan game dengan lingkungan virtual, tanpa root.</p>
@@ -137,7 +146,22 @@
         </div>
       </div>
 
-      <!-- ========== KATEGORI 2 ========== -->
+      <div class="section-title">📌 Cara Download</div>
+      <ol>
+        <li>Klik tombol "Download" di atas.</li>
+        <li>Klik tombol "Like Video", lalu like videonya.</li>
+        <li>Klik tombol kembali di handphone.</li>
+        <li>Klik tombol "Download".</li>
+        <li>Klik tombol "Open".</li>
+        <li>Klik tombol "Next".</li>
+        <li>Klik tombol "Open".</li>
+        <li>Klik tombol "Open".</li>
+        <li>Klik "Go to Link".</li>
+        <li>Klik "Open Link".</li>
+        <li>Pilih "I'm a Human".</li>
+        <li>Klik "Download File".</li>
+      </ol>
+
       <div class="category-title">2. Game Guardian (Latest Version)</div>
 
       <div class="download-item">
@@ -164,7 +188,6 @@
         </div>
       </div>
 
-      <!-- Cara Download -->
       <div class="section-title">📌 Cara Download</div>
       <ol>
         <li>Klik salah satu tombol "Download" di atas.</li>
@@ -183,10 +206,7 @@
 
     </section>
 
-    <footer>
-      © <span id="year"></span> ❤️ VeNemu
-    </footer>
-
+    <footer>© <span id="year"></span> ❤️ VeNemu</footer>
   </div>
 
   <div id="toggleTheme">🌙 / ☀️</div>
@@ -195,18 +215,19 @@
     // Theme toggle
     const toggle = document.getElementById('toggleTheme');
     const saved = localStorage.getItem('theme');
-    if(saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
     toggle.addEventListener('click', () => {
       const now = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', now);
       localStorage.setItem('theme', now);
     });
 
+    // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Download button click only, no right click, open new tab
+    // Download buttons: click only, no right-click, open new tab
     document.querySelectorAll('.btn[data-link]').forEach(btn => {
-      btn.addEventListener('contextmenu', e => e.preventDefault()); // disable right click
+      btn.addEventListener('contextmenu', e => e.preventDefault());
       btn.addEventListener('click', () => {
         const url = btn.getAttribute('data-link');
         window.open(url, '_blank');
